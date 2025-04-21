@@ -1,3 +1,38 @@
+# Bot Battlr
+This is a React Application that will allow us to browse through a list of available robots, adding bots into your army.
+
+
+## Description
+
+Users will be able to:
+- View available bots
+- Add bots to their army by clicking to enlist them
+- Release bots from their army by clicking to release them
+- Permanently discharge bots from server by clicking the red "x" button
+
+## Features
+
+- Bot Collection: Displays all available bots with their details
+- Your Bot Army: Shows the bots that have been enlisted
+- Click to Enlist/Release: Add or remove bots from your army
+- Discharge: Permanently remove a bot from both the frontend and backend
+
+## Setup Instructions
+
+1. Clone this repository
+2. Install dependencies:   "npm install"
+3. Create a `db.json` file in the project root and add the provided bot data
+4. Start the JSON server: "json-server --watch db.json --port 8001"
+5. In a new terminal, start the React application: npm start
+6. Open your browser and navigate to `http://localhost:3000`
+
+## Technologies Used
+
+- React
+- JSON Server 
+- Bootstrap 
+- Fetch API 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

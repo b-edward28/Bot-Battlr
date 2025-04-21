@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
     const [bots, setBots] = useState([]);
     const [myArmy, setMyArmy] = useState([]);
-    const [selectedBot, setSelectedBot] = useState(null);
 
     useEffect(() => {
         fetch("http://localhost:8001/bot")
@@ -20,7 +19,6 @@ function App() {
       if (!myArmy.find((armyBot) => armyBot.id === bot.id)) {
         setMyArmy([...myArmy, bot]);
       }
-      setSelectedBot(null);
     }
 
     const releaseBot = (botId) => {
