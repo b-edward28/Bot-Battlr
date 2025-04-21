@@ -33,7 +33,7 @@ function BotCard({ bot, handleClick, inArmy, dischargeBot }) {
                 <button className= "btn btn-danger btn-sm position-absolute top-0 end-0 m-2"
                 onClick={(event) => {
                     event.stopPropagation()
-                    dischargeBot(bot)}}
+                    dischargeBot(bot.id)}}
                 >
                         X
                 </button>
@@ -52,24 +52,25 @@ function BotCard({ bot, handleClick, inArmy, dischargeBot }) {
                     <small>{bot.catchphrase}</small>
                 </p>
                 
-                <div className="row text-center">
-                    <div className="col-4">
+                <div className="d-flex justify-content-center text-center gap-4">
+                    <div>
                         <div className="fw-bold">Health</div>
                         <div>{bot.health}</div>
-                    
+                    </div>
+                    <div>
                         <div className="fw-bold">Damage</div>
                         <div>{bot.damage}</div>
-                        
+                    </div>
+                    <div>
                         <div className="fw-bold">Armor</div>
                         <div>{bot.armor}</div>
                     </div>
                 </div>
-                
+
                 <div className="card text-center">{inArmy ? "Click to release" : "Click to enlist"}</div>
             </div>
-    </div>
-  )
-
+        </div>
+    );
 }
 export default BotCard;
 
