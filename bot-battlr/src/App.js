@@ -11,7 +11,7 @@ function App() {
     const [selectedBot, setSelectedBot] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:8001/bots")
+        fetch("http://localhost:8001/bot")
             .then((response) => response.json())
             .then((data) => setBots(data));
     }, []);
@@ -29,7 +29,7 @@ function App() {
 
     const dischargeBot = async (botId) => {
       try {
-        await fetch(`http://localhost:8001/bots/${botId}`, {
+        await fetch(`http://localhost:8001/bot/${botId}`, {
           method: "DELETE",
         })
       } catch (error) {

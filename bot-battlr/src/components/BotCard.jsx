@@ -52,7 +52,7 @@ function BotCard({ bot, handleClick, inArmy, dischargeBot }) {
                     <small>{bot.catchphrase}</small>
                 </p>
                 
-                <div className="d-flex justify-content-center text-center gap-4">
+                <div className="d-flex justify-content-center text-center gap-2">
                     <div>
                         <div className="fw-bold">Health</div>
                         <div>{bot.health}</div>
